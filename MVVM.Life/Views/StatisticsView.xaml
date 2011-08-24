@@ -1,0 +1,30 @@
+﻿<UserControl x:Class="MVVM.Life.Views.StatisticsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    
+    <StackPanel Orientation="Horizontal" Grid.Row="2">
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="Alive" Margin="5,0,0,0"/>
+            <TextBlock Text="{Binding Path=PopulationAlive, Mode=OneWay}" TextAlignment="Center" Margin="5,0,0,0"/>
+        </StackPanel>
+        
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="Dead" Margin="5,0,0,0"/>
+            <TextBlock Text="{Binding Path=PopulationDead, Mode=OneWay}" TextAlignment="Center" Margin="5,0,0,0"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="Percentage Alive" Margin="5,0,0,0"/>
+            <TextBlock Text="{Binding Path=AlivePercentage, Mode=OneWay, StringFormat=0%}" TextAlignment="Center" Margin="5,0,0,0"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Vertical">
+            <TextBlock Text="Generation" Margin="5,0,0,0"/>
+            <TextBlock Text="{Binding Path=GenerationCounter, Mode=OneWay}" TextAlignment="Center" Margin="5,0,0,0"/>
+        </StackPanel>
+    </StackPanel>
+</UserControl>
